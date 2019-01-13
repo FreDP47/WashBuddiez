@@ -1,0 +1,30 @@
+<br><br>
+<div class="container-fluid">
+<div class="row">
+  <div *ngFor="let list of products" class="col-sm-3">
+    <div class="card-deck" style="width:70%">
+      <div class="card" >
+        <img class="card-img" src="{{list.product_img}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+      <h5 class="card-title">{{list.product_price}} /piece</h5>
+      <h1 class="card-text"></h1>
+    </div>
+    
+  </div>
+  
+  </div>
+
+  </div>
+  </div>
+  <!-- <button type="button" class="btn btn-primary align-self-end" value=".align-self-end">See All and Order</button> -->
+  <!-- <button class="btn btn-primary float-right">Button</button> -->
+</div>
+
+<br><br>
+
+<!-- <button type="button" class="btn btn-primary align-self-end">See All and Order</button> -->
+<button mat-raised-button color="primary" style="float:right;">See All and Order</button>
+
+<br><br>
+<br><br>
+
