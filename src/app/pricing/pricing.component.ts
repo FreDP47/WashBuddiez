@@ -106,7 +106,7 @@ export class PricingComponent {
     del(pid){
       console.log(pid);
       for(var i=0;i<this.products.length;i++){
-        if(this.products[i].product_id === pid)
+        if(this.products[i].product_id === pid && this.products[i].product_quantity>0)
         {  
           this.products[i].product_quantity -= 1;
         }           

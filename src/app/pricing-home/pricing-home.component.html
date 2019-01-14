@@ -23,7 +23,10 @@
 <br><br>
 
 <!-- <button type="button" class="btn btn-primary align-self-end">See All and Order</button> -->
-<button mat-raised-button color="primary" style="float:right;">See All and Order</button>
+<!-- <button mat-raised-button color="primary" style="float:right;">See All and Order</button> -->
+<div class="col text-right" routerLinkActive="active">
+  <a [routerLink]="['/pricing']" class="btn btn-primary btn-round btn-lg">See All and Order</a>
+</div>
 
 <br><br>
 <br><br>
