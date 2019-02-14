@@ -9,7 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { SigninComponent } from './signin/signin.component';
+import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
 
 const routes: Routes =[
@@ -18,7 +18,7 @@ const routes: Routes =[
     { path: 'pricing',          component: PricingComponent },
     { path: 'signup',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
-    { path: 'signin',      component: SigninComponent },
+    { path: 'login',      component: LoginComponent },
 
     { path: 'test',      component: TestComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }

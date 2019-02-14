@@ -6,11 +6,11 @@ import {
 } from 'angular-6-social-login';
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class SigninComponent {
+export class LoginComponent {
 
   constructor( private socialAuthService: AuthService ) {}
   

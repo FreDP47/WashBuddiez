@@ -27,7 +27,7 @@ import {SocialLoginModule,
     GoogleLoginProvider,
     FacebookLoginProvider,
 } from "angular-6-social-login";
-import { SigninComponent } from './signin/signin.component';
+import { LoginComponent } from './login/login.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig([
@@ -52,7 +52,7 @@ export function getAuthServiceConfigs() {
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    SigninComponent, 
+    LoginComponent, 
   ],
   imports: [
     BrowserModule,
