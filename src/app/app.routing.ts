@@ -18,7 +18,7 @@ const routes: Routes =[
     { path: 'pricing',          component: PricingComponent },
     { path: 'signup',           component: SignupComponent },
     { path: 'landing',          component: LandingComponent },
-    { path: 'login',      component: LoginComponent },
+    { path: 'login',            component: LoginComponent },
 
     { path: 'test',      component: TestComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
