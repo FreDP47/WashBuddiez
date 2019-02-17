@@ -1,10 +1,3 @@
-
-
-<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
-<button (click)="socialSignIn('google')">login in with Google</button> 
-
-
-
 <div class="wrapper">
     <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
         <div class="filter"></div>
@@ -15,15 +8,13 @@
                             <h3 class="title">Welcome</h3>
                             <h4 class="title">Sign in With</h4>
                             <div class="social-line text-center">
-                                <a (click)="socialSignIn('facebook')" class="btn btn-neutral btn-facebook btn-just-icon">
+                                <a href="http://localhost:3000/signin/facebook/" class="btn btn-neutral btn-facebook btn-just-icon">
                                     <i class="fa fa-facebook-square"></i>
                                 </a>
-                                <a (click)="socialSignIn('google')" class="btn btn-neutral btn-google btn-just-icon">
+                                <a href="http://localhost:3000/signin/google/"class="btn btn-neutral btn-google btn-just-icon">
                                     <i class="fa fa-google"></i>
                                 </a>
-                                <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
+                                
                             </div>
                             <form class="register-form">
                                 <label>Email</label>

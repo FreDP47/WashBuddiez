@@ -33,12 +33,12 @@ export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig([
     {
       id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("223862321828820")
+    provider: new FacebookLoginProvider("not required")
     },
 
     {
       id: GoogleLoginProvider.PROVIDER_ID,
-      provider: new GoogleLoginProvider("772737254200-6qfm2e7dn9fslcag026at7o3gva600tt.apps.googleusercontent.com")
+      provider: new GoogleLoginProvider("not required")
   }]);
   
   return config;
