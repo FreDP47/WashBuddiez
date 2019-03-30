@@ -7,8 +7,6 @@ import { RouterModule } from '@angular/router';
 
 
 import { HomeComponent } from './home.component';
-
-import { ComponentsModule } from '../components/components.module';
 import { PricingComponent } from '../pricing/pricing.component';
 import { PricingHomeComponent } from '../pricing-home/pricing-home.component';
 import { TestComponent } from "../test/test.component";
@@ -23,7 +21,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         BrowserModule,
         FormsModule,
         RouterModule,
-        ComponentsModule,
         BrowserModule,
         BrowserAnimationsModule,
         MaterialModule
