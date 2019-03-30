@@ -6,6 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 
+import { HttpClientModule } from '@angular/common/http'; 
+
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 
 import { AppComponent } from './app.component';
@@ -22,12 +24,15 @@ import { PricingHomeComponent } from './pricing-home/pricing-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "./material.module";
 import {MatButtonModule } from '@angular/material';
+
+import {UserService} from './services/user.service';
 import {SocialLoginModule,
     AuthServiceConfig,
     GoogleLoginProvider,
     FacebookLoginProvider,
 } from "angular-6-social-login";
 import { LoginComponent } from './login/login.component';
+import { HttpClient } from '@angular/common/http';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig([
@@ -59,6 +64,7 @@ export function getAuthServiceConfigs() {
     JwBootstrapSwitchNg2Module,
     NgbModule.forRoot(),
     FormsModule,
+    HttpClientModule,
     RouterModule,
     AppRoutingModule,
     HomeModule,
@@ -68,10 +74,8 @@ export function getAuthServiceConfigs() {
     SocialLoginModule,
   ],
   providers: [
-    {
-    provide: AuthServiceConfig,
-      useFactory: getAuthServiceConfigs
-    }
+    UserService,
+    {provide: AuthServiceConfig,useFactory: getAuthServiceConfigs}
   ],
   bootstrap: [AppComponent]
 })

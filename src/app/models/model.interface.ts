@@ -7,4 +7,6 @@ export interface Response {
 
 export class User {
     userId: string;
+    userName: string;
+    emailId :string;
   }

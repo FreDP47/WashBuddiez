@@ -9,4 +9,15 @@
 <button mat-raised-button color="accent">Accent</button>
 <button mat-button color="primary">Primary</button>
 
-<button type="button" class="btn" (click)="submitLogin();">Login with facebook</button>
+<li *ngFor="let user of users">
+Hey {{user._id}}
+{{user.google.name}}
+<!-- {{user.userName}} -->
+</li>
+<!-- {{user.google.name}} -->
+Heyyy single user {{user.google.name}}
+<!-- {{user.userId}} -->
+<!-- {{user.name}} -->
+
+
+<!-- <button type="button" class="btn" (click)="submitLogin();">Login with facebook</button> -->

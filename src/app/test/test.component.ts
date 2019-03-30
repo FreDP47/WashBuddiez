@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
+import { User } from '../models/model.interface';
 
 declare var window: any;
 declare var FB: any;
@@ -9,47 +11,38 @@ declare var FB: any;
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-
-  constructor() { }
+  users : User[];
+  user: any = {};
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    (window as any).fbAsyncInit = function() {
-      FB.init({
-        appId      : '2345489972336601',
-        cookie     : true,
-        xfbml      : true,
-        version    : 'v3.2'
-      });
-      FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
+    this.fetchAllUsers();
+    this.fetchSingleUser("5c8fbb055d8ad203ce969b07");
   }
 
-  submitLogin(){
-    console.log("submit login to facebook");
-    // FB.login();
-    FB.login((response)=>
-        {
-          console.log('submitLogin',response);
-          if (response.authResponse)
-          {
-            //login success
-            //login success code here
-            //redirect to home page
-           }
-           else
-           {
-           console.log('User login failed');
-         }
-      });
-
+  fetchAllUsers(){
+    this.userService
+        .getUsers()
+        .subscribe((data: User[]) => {
+            this.users= data;
+            console.log("data is " + data)
+            console.log('alluser Data requested ...');
+          console.log(this.users);
+        });
   }
 
+  fetchSingleUser(id)
+  {
+    this.userService
+    .getUserDetails(id)
+  //   .subscribe((data: User[]) =>
+  // {this.user=data;
+  .subscribe(res=>
+    {this.user= res;
+      console.log(res)
+      console.log(this.user.google.name)} 
+  );
+  //console.log(this.user);
+  
+}
 }
