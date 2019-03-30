@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
-import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';

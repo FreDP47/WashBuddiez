@@ -26,28 +26,10 @@ import { MaterialModule } from "./material.module";
 import {MatButtonModule } from '@angular/material';
 
 import {UserService} from './services/user.service';
-import {SocialLoginModule,
-    AuthServiceConfig,
-    GoogleLoginProvider,
-    FacebookLoginProvider,
-} from "angular-6-social-login";
+
 import { LoginComponent } from './login/login.component';
 import { HttpClient } from '@angular/common/http';
 
-export function getAuthServiceConfigs() {
-  let config = new AuthServiceConfig([
-    {
-      id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("not required")
-    },
-
-    {
-      id: GoogleLoginProvider.PROVIDER_ID,
-      provider: new GoogleLoginProvider("not required")
-  }]);
-  
-  return config;
-}
 
 @NgModule({
   declarations: [
@@ -71,11 +53,10 @@ export function getAuthServiceConfigs() {
     MaterialModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    SocialLoginModule,
   ],
   providers: [
     UserService,
-    {provide: AuthServiceConfig,useFactory: getAuthServiceConfigs}
+    
   ],
   bootstrap: [AppComponent]
 })
