@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
     constructor(private userService: UserService) { }
 
     ngOnInit() {
-        this.fetchSingleUser("5c8fbb055d8ad203ce969b07");
+        this.fetchSingleUser("5ca0f3e2ca4d6a3b52382873");
 
     }
 
@@ -27,7 +27,8 @@ export class ProfileComponent implements OnInit {
   .subscribe(res=>
     {this.user= res;
       console.log(res)
-      console.log(this.user.google.name)} 
+      console.log(this.user.username)
+    } 
   );
 }
 }

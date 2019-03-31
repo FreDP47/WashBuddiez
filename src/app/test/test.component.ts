@@ -12,12 +12,13 @@ declare var FB: any;
 })
 export class TestComponent implements OnInit {
   users : User[];
-  user: any = {};
+  //user: any = {};
+  user: User[];
   constructor(private userService: UserService) { }
 
   ngOnInit() {
     this.fetchAllUsers();
-    this.fetchSingleUser("5c8fbb055d8ad203ce969b07");
+    this.fetchSingleUser("5ca0f3e2ca4d6a3b52382873");
   }
   
 
@@ -36,13 +37,17 @@ export class TestComponent implements OnInit {
   {
     this.userService
     .getUserDetails(id)
-  //   .subscribe((data: User[]) =>
-  // {this.user=data;
-  .subscribe(res=>
-    {this.user= res;
-      console.log(res)
-      console.log(this.user.google.name)} 
-  );
+     .subscribe((data: User[]) =>
+   {
+     this.user=data;
+     console.log(this.user);
+   });
+  // // .subscribe(res=>
+  //   {
+  //     // this.user= res;
+  //     // console.log(res)
+  //     // console.log(this.user.username)
+  //   } 
   //console.log(this.user);
   
 }
