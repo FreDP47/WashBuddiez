@@ -8,8 +8,6 @@ import { AppRoutingModule } from './app.routing';
 
 import { HttpClientModule } from '@angular/common/http'; 
 
-import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
-
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
@@ -28,7 +26,7 @@ import {MatButtonModule } from '@angular/material';
 import {UserService} from './services/user.service';
 
 import { LoginComponent } from './login/login.component';
-import { HttpClient } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -43,7 +41,6 @@ import { HttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    JwBootstrapSwitchNg2Module,
     NgbModule.forRoot(),
     FormsModule,
     HttpClientModule,
@@ -51,12 +48,10 @@ import { HttpClient } from '@angular/common/http';
     AppRoutingModule,
     HomeModule,
     MaterialModule,
-    MatButtonModule,
     BrowserAnimationsModule,
   ],
   providers: [
     UserService,
-    
   ],
   bootstrap: [AppComponent]
 })

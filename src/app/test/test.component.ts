@@ -19,6 +19,7 @@ export class TestComponent implements OnInit {
     this.fetchAllUsers();
     this.fetchSingleUser("5c8fbb055d8ad203ce969b07");
   }
+  
 
   fetchAllUsers(){
     this.userService
