@@ -1,27 +1,19 @@
 <br><br>
 <div class="container-fluid">
 <div class="row">
-  <div *ngFor="let list of products" class="col-xl-3 col-lg-3 col-md-3">
-    <div class="card-deck" style="width:70%;padding-bottom:15%">
-      <div class="card" style="background-color:#390099">
-        <img class="card-img" src="{{list.product_img}}" alt="Card image" style="width:100%;padding: 5%">
+  <div *ngFor="let list of products" class="col-xl-3">
+    <div class="card-deck" style="width:150px;padding-bottom:15%;margin: auto">
+      <div class="card" style="background-color:#390099;margin: auto">
+        <img class="card-img" src="{{list.product_img}}" alt="Card image" style="padding: 5%">
       <div class="card-body">
       <h5 class="card-title" style="color:#FF4500;font-weight: bold;text-align: center">{{list.product_name}}</h5>
       <h5 class="card-title" style="color:#FF4500;font-weight: bold;text-align: center">{{list.product_price}}/piece</h5>
     </div>
-    
-  </div>
-  
-  </div>
-
   </div>
   </div>
-  <!-- <button type="button" class="btn btn-primary align-self-end" value=".align-self-end">See All and Order</button> -->
-  <!-- <button class="btn btn-primary float-right">Button</button> -->
+  </div>
+  </div>
 </div>
-
-<!-- <button type="button" class="btn btn-primary align-self-end">See All and Order</button> -->
-<!-- <button mat-raised-button color="primary" style="float:right;">See All and Order</button> -->
 <div class="col text-right" routerLinkActive="active">
   <a [routerLink]="['/pricing']" class="btn btn-round btn-lg" style="background-color:#390099;color:#FF4500;border-color:#390099">See All and Order</a>
 </div>

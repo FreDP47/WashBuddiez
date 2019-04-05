@@ -3,11 +3,37 @@
     #midText{
         text-align: center
     }
+
+    .btn-circle {
+        background-color: #ff4500;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px;
+        color: #390099;
+        border-radius: 20px;
+        font-weight: bold;
+        margin: auto;
+        vertical-align: center;
+      }
 }
 
 @media only screen and (min-width: 1200px){
     #midText{
         text-align: right
     }
+
+    .btn-circle {
+        background-color: #ff4500;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 5.5px;
+        color: #390099;
+        border-radius: 20px;
+        font-weight: bold;
+        margin: auto;
+        vertical-align: center;
+      }
 }
 
