@@ -83,10 +83,20 @@
 .btn-outline-neutral { @include btn-outline-styles($white-color, $default-states-color);
     &:hover,
     &:focus{
-        color: $default-states-color;
+        color: #ff4500;
         background-color: $white-color;
     }
 }
+
+.btn-outline-neutral-scroll-down{
+    @include btn-outline-styles(#ff4500, #ff4500);
+    &:hover,
+    &:focus{
+        color: #ffffff;
+        background-color: #ff4500;
+    }
+}
+
 .btn-neutral {
     @include btn-styles($white-color, $white-color);
     color: $default-color;
