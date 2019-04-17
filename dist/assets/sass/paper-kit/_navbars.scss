@@ -18,8 +18,8 @@
 
     .navbar-brand{
         font-weight: $font-weight-bold;
-        margin: $navbar-margin-brand;
-        padding: $navbar-padding-brand;
+        // margin: $navbar-margin-brand;
+        // padding: $navbar-padding-brand;
         font-size: $font-size-base;
         color: #FF4500;
         text-transform: uppercase;
@@ -52,11 +52,9 @@
             line-height: 1.6;
             margin: $navbar-margin-a;
             padding: $navbar-padding-a;
-            opacity: .8;
             font-size: $font-size-small;
             text-transform: uppercase;
             font-weight: 600;
-            color: #FF4500;
          }
         .nav-item .nav-link.btn{
             margin: $navbar-margin-a-btn;
@@ -116,9 +114,9 @@
     .caret{
        @include center-item();
     }
-    &.navbar-transparent{
-        padding-top: 25px;
-    }
+    // &.navbar-transparent{
+    //     // padding-top: 25px;
+    // }
     .logo-container{
         margin-top: 5px;
         .logo{
@@ -160,7 +158,7 @@
 .navbar-transparent, [class*="bg"]{
     .navbar-brand{
         color: $white-color;
-        @include opacity(.9);
+        // @include opacity(.9);
 
         &:focus,
         &:hover{
@@ -180,8 +178,8 @@
         .active .nav-link:focus,
         .nav-item .nav-link:hover,
         .nav-item .nav-link:focus{
-            background-color: transparent;
-            color: $white-color;
+            background-color: $white-color;
+            color: #390099;
             @include opacity(1);
         }
         .nav .nav-item a.btn:hover{
