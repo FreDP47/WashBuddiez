@@ -9,7 +9,8 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
-    @ViewChild('loginLink') input;
+    @ViewChild('loginLink') inputLoginElement;
+    @ViewChild('pricingLink') inputPricingElement;
     constructor(public location: Location, private element : ElementRef) {
         this.sidebarVisible = false;
     }
@@ -21,14 +22,19 @@ export class NavbarComponent implements OnInit {
     }
 
     scroll = (): void => {
-        const loginElement = this.input.nativeElement;
+        const loginElement = this.inputLoginElement.nativeElement;
+        const pricingElement = this.inputPricingElement.nativeElement;
         const number = window.scrollY;
             if (number > 50 || window.pageYOffset > 50) {
                 loginElement.classList.remove('btn-outline-neutral');
                 loginElement.classList.add('btn-outline-neutral-scroll-down');
+                pricingElement.classList.remove('btn-outline-neutral');
+                pricingElement.classList.add('btn-outline-neutral-scroll-down');
             } else {
                 loginElement.classList.remove('btn-outline-neutral-scroll-down');
                 loginElement.classList.add('btn-outline-neutral');
+                pricingElement.classList.remove('btn-outline-neutral-scroll-down');
+                pricingElement.classList.add('btn-outline-neutral');
             }
       };
 

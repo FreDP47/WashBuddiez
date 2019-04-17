@@ -52,11 +52,9 @@
             line-height: 1.6;
             margin: $navbar-margin-a;
             padding: $navbar-padding-a;
-            opacity: .8;
             font-size: $font-size-small;
             text-transform: uppercase;
             font-weight: 600;
-            color: #FF4500;
          }
         .nav-item .nav-link.btn{
             margin: $navbar-margin-a-btn;
@@ -180,8 +178,8 @@
         .active .nav-link:focus,
         .nav-item .nav-link:hover,
         .nav-item .nav-link:focus{
-            background-color: transparent;
-            color: $white-color;
+            background-color: $white-color;
+            color: #390099;
             @include opacity(1);
         }
         .nav .nav-item a.btn:hover{
