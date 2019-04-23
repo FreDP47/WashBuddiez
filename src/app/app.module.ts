@@ -17,11 +17,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
-import { PricingComponent } from './pricing/pricing.component';
-import { PricingHomeComponent } from './pricing-home/pricing-home.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from "./material.module";
-import {MatButtonModule } from '@angular/material';
+import { MaterialModule } from './material.module';
+
 
 import {UserService} from './services/user.service';
 
@@ -37,7 +36,7 @@ import { LoginComponent } from './login/login.component';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent, 
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

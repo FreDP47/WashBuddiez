@@ -8,9 +8,10 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { PricingComponent } from '../pricing/pricing.component';
 import { PricingHomeComponent } from '../pricing-home/pricing-home.component';
-import { TestComponent } from "../test/test.component";
+import { TestComponent } from '../test/test.component';
 import { MaterialModule  } from '../material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardComponent } from '../test/pricing-card/card/card.component';
 
 
 @NgModule({
@@ -22,10 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         BrowserModule,
         BrowserAnimationsModule,
         MaterialModule
-        
     ],
-    declarations: [ HomeComponent, PricingComponent,PricingHomeComponent,TestComponent ],
-    exports:[ HomeComponent, PricingComponent, PricingHomeComponent ],
+    declarations: [ HomeComponent, PricingComponent, PricingHomeComponent, TestComponent, CardComponent ],
+    exports: [ HomeComponent, PricingComponent, PricingHomeComponent ],
     providers: []
 })
 export class HomeModule { }

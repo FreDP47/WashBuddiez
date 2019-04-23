@@ -11,7 +11,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
 
-const routes: Routes =[
+const routes: Routes = [
     { path: 'home',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'pricing',          component: PricingComponent },
