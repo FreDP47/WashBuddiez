@@ -25,8 +25,7 @@ import { MaterialModule } from './material.module';
 import {UserService} from './services/user.service';
 
 import { LoginComponent } from './login/login.component';
-
-
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +36,7 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

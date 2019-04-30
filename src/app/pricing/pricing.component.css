@@ -1,27 +1,25 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 
-
-.panel{
+.panel {
   padding: 1px;
 }
 
-.panel-body{
-  border-radius: 2em; 
+.panel-body {
+  border-radius: 2em;
   background-color: white;
   max-height: 50%;
 }
-.panel-footer{
+.panel-footer {
   background-color: oldlace;
   text-align: center;
 }
 
-.card{
+.card {
   width: 20%;
 }
 
-
-body { 
+body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
 }
@@ -35,10 +33,28 @@ body {
   float: right;
 }
 
-.plus{
+.plus {
   margin-right: 5px;
   margin-left: 10px;
 }
-.total_price_float{
-  position:fixed;
+
+@media only screen and (min-width: 1200px) {
+  .totalPriceFloat {
+    position: fixed;
+  }
+  
+  .totalPriceBtnFloat{
+    position: fixed;
+    margin-top: 66px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .totalPriceDivFloat {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .totalPriceBtnFloat{
+    margin-top: 5px;
+  }
 }
