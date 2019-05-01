@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProducts } from '../products';
 import { OrderService } from '../services/order.service';
-
+import { OrderDetails, Order } from 'app/models/model.interface';
 
 const products: IProducts[] = [
   {
@@ -69,7 +69,6 @@ const products: IProducts[] = [
     product_details: "wash with ironing",
     product_quantity: 0,
   }
-
 ]
 
 @Component({
@@ -78,10 +77,22 @@ const products: IProducts[] = [
   styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent {
-  products;
+  order: Order;
+  products: IProducts[];
   total = 0;
-  constructor() {
+  constructor(private orderService: OrderService) {
     this.products = products;
+    this.order = orderService.getOrder();
+    if (this.order != null && this.order.details != null) {
+      const orderDetails: OrderDetails[] = this.order.details;
+      this.products.forEach(prod => {
+        orderDetails.forEach(orderDetail => {
+          if (prod.product_name === orderDetail.apparel) {
+            prod.product_quantity = orderDetail.quantity;
+          }
+        })
+      });
+    }
   }
 
   totalPrice() {
@@ -116,6 +127,13 @@ export class PricingComponent {
   }
 
   AddOrderDetails() {
-    
+    this.products.forEach(prod => {
+      if (prod.product_quantity > 0) {
+        const orderDetail = new OrderDetails();
+        orderDetail.apparel = prod.product_name;
+        orderDetail.quantity = prod.product_quantity;
+        this.orderService.AddOrderDetails(orderDetail);
+      }
+    });
   }
 }

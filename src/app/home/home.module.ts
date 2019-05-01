@@ -12,6 +12,7 @@ import { TestComponent } from '../test/test.component';
 import { MaterialModule  } from '../material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from '../test/pricing-card/card/card.component';
+import { OrderService } from '../services/order.service'
 
 
 @NgModule({
@@ -26,6 +27,6 @@ import { CardComponent } from '../test/pricing-card/card/card.component';
     ],
     declarations: [ HomeComponent, PricingComponent, PricingHomeComponent, TestComponent, CardComponent ],
     exports: [ HomeComponent, PricingComponent, PricingHomeComponent ],
-    providers: []
+    providers: [OrderService]
 })
 export class HomeModule { }

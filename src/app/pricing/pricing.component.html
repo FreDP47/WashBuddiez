@@ -26,7 +26,7 @@
     </div>
     <div class="col-sm-3 totalPriceDivFloat">
       <h4 class="totalPriceFloat">Cart Value: {{total | currency: 'INR' }}</h4>
-      <button mat-raised-button class="totalPriceBtnFloat" onclick="AddOrderDetails()">Proceed to Checkout</button>
+      <button mat-raised-button class="totalPriceBtnFloat" [routerLink]="['/checkout']" (click)="AddOrderDetails()">Proceed to Checkout</button>
     </div>
   </div>
 </div>

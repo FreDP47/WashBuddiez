@@ -10,6 +10,7 @@ import { LandingComponent } from './landing/landing.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
     { path: 'home',             component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'landing',          component: LandingComponent },
     { path: 'login',            component: LoginComponent },
     { path: 'test',             component: TestComponent },
+    { path: 'checkout',         component: CheckoutComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

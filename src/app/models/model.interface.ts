@@ -19,14 +19,14 @@ export class Address {
   landmark: string;
   city: string;
   state: string;
-  pincode: Int32Array;
-  phoneNo: Int32Array;
+  pincode: number;
+  phoneNo: number;
   time: Date;
 }
 
 export class OrderDetails {
   apparel: string;
-  quantity: Int32Array;
+  quantity: number;
 }
 
 export class Order {
