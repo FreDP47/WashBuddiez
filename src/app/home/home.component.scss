@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
 @media only screen and (max-width: 1199px){
-    #midText{
-        text-align: center
-    }
+    // #midText{
+    //     text-align: center
+    // }
 
     .btn-circle {
         background-color: #ff4500;
@@ -10,7 +10,7 @@
         height: 30px;
         text-align: center;
         padding: 6px;
-        color: #390099;
+        color: #E9E2DC;
         border-radius: 20px;
         font-weight: bold;
         margin: auto;
@@ -26,9 +26,9 @@
 }
 
 @media only screen and (min-width: 1200px){
-    #midText{
-        text-align: right
-    }
+    // #midText{
+    //     text-align: right
+    // }
 
     .btn-circle {
         background-color: #ff4500;
@@ -36,7 +36,7 @@
         height: 30px;
         text-align: center;
         padding: 5.5px;
-        color: #390099;
+        color: #E9E2DC;
         border-radius: 20px;
         font-weight: bold;
         margin: auto;

@@ -90,7 +90,7 @@
 .btn-outline-info    { @include btn-outline-styles($info-color, $info-states-color); }
 .btn-outline-warning { @include btn-outline-styles($warning-color, $warning-states-color); }
 .btn-outline-danger  { @include btn-outline-styles($danger-color, $danger-states-color); }
-.btn-outline-neutral { @include btn-outline-styles($white-color, $default-states-color);
+.btn-outline-neutral { @include btn-outline-styles(#ff4500, #ff4500);
     &:hover,
     &:focus{
         color: #ff4500;
