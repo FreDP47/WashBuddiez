@@ -30,7 +30,13 @@ export class OrderDetails {
 }
 
 export class Order {
-  user: User;
-  address: Address;
+  name: string;
+  email: string;
+  phone: number;
+  pickupDateTime: string;
+  comments: string;
+  couponCode: string;
+  address: string;
+  finalPrice: number;
   details: OrderDetails[];
 }

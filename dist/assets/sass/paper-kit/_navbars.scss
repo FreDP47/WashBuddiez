@@ -178,8 +178,8 @@
         .active .nav-link:focus,
         .nav-item .nav-link:hover,
         .nav-item .nav-link:focus{
-            background-color: $white-color;
-            color: #390099;
+            background-color: #ff4500;
+            color: #E9E2DC;
             @include opacity(1);
         }
         .nav .nav-item a.btn:hover{
@@ -476,8 +476,8 @@
     }
 }
 .navbar-transparent{
-    background: #390099 !important;
-    border-bottom: 1px solid #390099;
+    background: #E9E2DC !important;
+    border-bottom: 1px solid #E9E2DC;
     box-shadow: none;
 
     .dropdown-menu .divider{
