@@ -1,7 +1,7 @@
 <br><br>
 <div class="container-fluid">
 <div class="row">
-  <div *ngFor="let list of products" class="col-xl-3">
+  <div *ngFor="let list of products | slice:0:8" class="col-xl-3">
     <div class="card-deck" style="width:150px;padding-bottom:15%;margin: auto">
       <div class="card" style="background-color:#E9E2DC;margin: auto">
         <img class="card-img" src="{{list.product_img}}" alt="Card image" style="padding: 5%">
