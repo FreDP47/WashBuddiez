@@ -14,7 +14,7 @@ export class PricingComponent {
   productCategories: string[] = ['Men', 'Women'];
   selectedProductCategory = this.productCategories[0];
   washCategories: string[] = ['WASH & FOLD', 'WASH & STEAM IRON', 'WASH & IRON', 'EXPRESS WASH',
-  'ULTRA WASH', 'STEAM IRON', 'STARCH WASH', 'DRY CLEAN', 'MENDING SINGLE', 'DYING', '1 P C'];
+  'STEAM IRON', 'STARCH WASH', 'DRY CLEAN', 'MENDING SINGLE', 'DYING', '1 P C'];
   selectedWashCategory = this.washCategories[0];
   filteredProducts: IProducts[];
   total = 0;

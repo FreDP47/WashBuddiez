@@ -1,0 +1,14 @@
+.overlay {
+    background-color: #5a4141;
+    display: none;
+    position: fixed;
+    opacity: 0.5;
+    background-image: url(assets/gif/blue_loading.gif);
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    background-size: 100px;
+}

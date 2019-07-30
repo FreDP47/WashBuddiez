@@ -15,6 +15,7 @@ export class CheckoutComponent {
   }
 
   submitOrder() {
+    const overlayElement = document.getElementById('overlay');
     const alertelement = document.getElementById('alert');
 
     if (this.order.finalPrice > 0) {
@@ -24,6 +25,7 @@ export class CheckoutComponent {
       }
 
       // Sending mail to user and to Admin
+      overlayElement.style.display = 'block';
       this.orderService.sendEmail(`${environment.api_url}/sendmail`, this.order).subscribe(
         data => {
           const res: any = data;
@@ -31,6 +33,7 @@ export class CheckoutComponent {
           alertelement.classList.add('alert-success');
           alertelement.style.display = 'block';
           this.orderService.resetOrder(new Order());
+          overlayElement.style.display = 'none';
         },
         err => {
           console.log(err);
@@ -38,6 +41,7 @@ export class CheckoutComponent {
           alertelement.classList.add('alert-danger');
           alertelement.style.display = 'block';
           this.orderService.resetOrder(new Order());
+          overlayElement.style.display = 'none';
         });
     } else {
       alertelement.innerText = 'There are no items in your cart. Please add some items from the pricing page.';
