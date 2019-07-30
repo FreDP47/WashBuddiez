@@ -4,13 +4,13 @@
       <div class="row" style="margin-bottom: 3%;margin-top: 4%">
         <div style="text-align: center"></div>
           <div class="form-inline form-group col-sm-6">
-              <label for="prodCatDrpDwn" style="text-align: center">Product type: </label>
+              <label for="prodCatDrpDwn" style="margin-right: 8px">Product type: </label>
               <select id="prodCatDrpDwn" class="form-control" [(ngModel)]="selectedProductCategory" (ngModelChange)="FilterProducts(selectedProductCategory, selectedWashCategory)">  
                 <option *ngFor="let prodCat of productCategories" [value]="prodCat">{{prodCat}}</option>
               </select>
           </div>
           <div class=" form-inline form-group col-sm-6">
-              <label for="washTypeDrpDwn" style="text-align: center">Wash type: </label>
+              <label for="washTypeDrpDwn" style="margin-right: 8px">Wash type: </label>
               <select id="washTypeDrpDwn" class="form-control" [(ngModel)]="selectedWashCategory" (ngModelChange)="FilterProducts(selectedProductCategory, selectedWashCategory)">  
                 <option *ngFor="let washCat of washCategories" [value]="washCat">{{washCat}}</option>
               </select>

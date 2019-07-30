@@ -27,13 +27,15 @@ export class Address {
 export class OrderDetails {
   apparel: string;
   quantity: number;
+  productType: string;
+  washType: string;
 }
 
 export class Order {
   name: string;
   email: string;
   phone: number;
-  pickupDateTime: string;
+  pickUpDateTime: string;
   comments: string;
   couponCode: string;
   address: string;

@@ -64,15 +64,19 @@ export class PricingComponent {
   }
 
   AddOrderDetails() {
-    const orderDetail = new OrderDetails();
     this.products.forEach(prod => {
+      const orderDetail = new OrderDetails();
       if (prod.product_quantity > 0) {
         orderDetail.apparel = prod.product_name;
         orderDetail.quantity = prod.product_quantity;
+        orderDetail.productType = prod.product_For;
+        orderDetail.washType = prod.product_details;
+
+        this.orderService.AddOrderDetails(orderDetail);
       }
     });
 
-    this.orderService.AddOrderDetails(orderDetail, this.total);
+    this.orderService.AddFinalPrice(this.total);
   }
 
   FilterProducts(prodCat: string, washCat: string) {

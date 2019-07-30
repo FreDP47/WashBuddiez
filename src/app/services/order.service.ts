@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Order, OrderDetails, Address, User } from 'app/models/model.interface';
 import { IProducts } from 'app/products';
+import { HttpClient } from '@angular/common/http';
 
 const products: IProducts[] = [
   { product_id: 'pd001', product_img : 'assets/img/shirt.svg', product_name : 'Shirt',
@@ -27,27 +28,28 @@ const products: IProducts[] = [
 export class OrderService {
   order: Order;
 
-  getProducts() {
+  constructor(private http: HttpClient) {
+    this.order = new Order;
+    this.order.details = [];
+  }
+
+  public getProducts() {
     return products;
   }
 
-  getOrder() {
+  public getOrder() {
     return this.order;
   }
 
-  setOrder(order: Order) {
+  public resetOrder(order: Order) {
     this.order = order;
+    this.order.details = [];
     products.forEach(prod => {
       prod.product_quantity = 0;
     });
   }
 
-  constructor() {
-    this.order = new Order;
-    this.order.details = [];
-  }
-
-  public AddOrderDetails(orderDetails: OrderDetails, finalPrice: number) {
+  public AddOrderDetails(orderDetails: OrderDetails) {
     let apparelPresent: Boolean = false;
     this.order.details.forEach(orderDetail => {
       if (orderDetail.apparel === orderDetails.apparel) {
@@ -59,7 +61,9 @@ export class OrderService {
     if (!apparelPresent) {
       this.order.details.push(orderDetails);
     }
+  }
 
+  public AddFinalPrice(finalPrice: number) {
     this.order.finalPrice = finalPrice;
   }
 
@@ -69,8 +73,12 @@ export class OrderService {
     this.order.finalPrice = order.finalPrice;
     this.order.phone = order.phone;
     this.order.email = order.email;
-    this.order.pickupDateTime = order.pickupDateTime;
+    this.order.pickUpDateTime = order.pickUpDateTime;
     this.order.couponCode = order.couponCode;
     this.order.comments = order.comments;
+  }
+
+  public sendEmail(url, data) {
+    return this.http.post(url, data);
   }
 }

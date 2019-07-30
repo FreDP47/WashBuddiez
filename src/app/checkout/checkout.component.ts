@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../services/order.service';
-import { OrderDetails, Order } from 'app/models/model.interface';
+import { Order } from 'app/models/model.interface';
+import {environment} from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-checkout',
@@ -14,20 +15,31 @@ export class CheckoutComponent {
   }
 
   submitOrder() {
+    const alertelement = document.getElementById('alert');
+
     if (this.order.finalPrice > 0) {
-      if (this.order.couponCode != null) {
+      if (this.order.couponCode != null && this.order.couponCode !== '') {
         this.order.finalPrice = this.order.finalPrice * 0.9;
-        const orderSubmitStatus = this.orderService.AddCheckoutDetails(this.order);
-
-        const alertelement = document.getElementById('alert');
-        alertelement.innerText = 'Order submitted successfully.';
-        alertelement.classList.add('alert-success');
-        alertelement.style.display = 'block';
-
-        this.orderService.setOrder(new Order());
+        this.orderService.AddCheckoutDetails(this.order);
       }
+
+      // Sending mail to user and to Admin
+      this.orderService.sendEmail(`${environment.api_url}/sendmail`, this.order).subscribe(
+        data => {
+          const res: any = data;
+          alertelement.innerText = 'Order submitted successfully.';
+          alertelement.classList.add('alert-success');
+          alertelement.style.display = 'block';
+          this.orderService.resetOrder(new Order());
+        },
+        err => {
+          console.log(err);
+          alertelement.innerText = 'Some error occurred. Please try again later.';
+          alertelement.classList.add('alert-danger');
+          alertelement.style.display = 'block';
+          this.orderService.resetOrder(new Order());
+        });
     } else {
-      const alertelement = document.getElementById('alert');
       alertelement.innerText = 'There are no items in your cart. Please add some items from the pricing page.';
       alertelement.classList.add('alert-danger');
       alertelement.style.display = 'block';
