@@ -26,6 +26,7 @@ import {UserService} from './services/user.service';
 
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
