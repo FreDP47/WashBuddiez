@@ -11,10 +11,12 @@ import { OrderDetails, Order } from 'app/models/model.interface';
 export class PricingComponent {
   order: Order;
   products: IProducts[];
-  productCategories: string[] = ['Men', 'Women', 'Children', 'Household', 'Accessories', 'Winter Wear', 'Addon'];
+  productCategories: string[] = ['Men', 'Women', 'Children', 'Household', 'Accessories',
+  'Winter Wear', 'Addon', 'Vehicle Wash', 'Shoe Polish'];
   selectedProductCategory = this.productCategories[0];
   washCategories: string[] = ['WASH & FOLD', 'WASH & STEAM IRON', 'WASH & IRON', 'EXPRESS WASH',
-  'STEAM IRON', 'STARCH WASH', 'DRY CLEAN', 'MENDING SINGLE', 'DYING', '1 PC'];
+  'STEAM IRON', 'STARCH WASH', 'DRY CLEAN', 'MENDING SINGLE', 'DYING', '1 PC', 'WATER WASH (Only Vehicle Wash)',
+  'FOAM WASH (Only Vehicle Wash)', 'FOAM WASH & VACCUM (Only Vehicle Wash)', 'SHOE POLISH (Only Shoe Polish)'];
   selectedWashCategory = this.washCategories[0];
   filteredProducts: IProducts[];
   total = 0;

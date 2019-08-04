@@ -27,6 +27,8 @@ import {UserService} from './services/user.service';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { PrivacyComponent } from './privacy/privacy.component';
     FooterComponent,
     LoginComponent,
     CheckoutComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    TermsAndConditionsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

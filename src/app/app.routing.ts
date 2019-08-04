@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
     { path: 'home',             component: HomeComponent },
@@ -23,6 +25,8 @@ const routes: Routes = [
     { path: 'test',             component: TestComponent },
     { path: 'checkout',         component: CheckoutComponent },
     { path: 'privacy',         component: PrivacyComponent },
+    { path: 'termsAndConditions', component: TermsAndConditionsComponent},
+    { path: 'aboutUs', component: AboutUsComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -775,6 +775,26 @@ const products: IProducts[] = [
   product_price : 3, product_details : '1 PC', product_quantity : 0, product_For: 'Addon'},
   { product_id: 'pd347', product_img : '', product_name : 'Large Bag',
   product_price : 8, product_details : '1 PC', product_quantity : 0, product_For: 'Addon'},
+
+  // WATER WASH for Vehicle Wash
+  { product_id: 'pd348', product_img : '', product_name : 'Bikes/Scooters',
+  product_price : 50, product_details : 'WATER WASH (Only Vehicle Wash)', product_quantity : 0, product_For: 'Vehicle Wash'},
+  { product_id: 'pd349', product_img : '', product_name : 'Cars/Jeeps',
+  product_price : 100, product_details : 'WATER WASH (Only Vehicle Wash)', product_quantity : 0, product_For: 'Vehicle Wash'},
+
+  // FOAM WASH for Vehicle Wash
+  { product_id: 'pd350', product_img : '', product_name : 'Bikes/Scooters',
+  product_price : 60, product_details : 'FOAM WASH (Only Vehicle Wash)', product_quantity : 0, product_For: 'Vehicle Wash'},
+  { product_id: 'pd351', product_img : '', product_name : 'Cars/Jeeps',
+  product_price : 150, product_details : 'FOAM WASH (Only Vehicle Wash)', product_quantity : 0, product_For: 'Vehicle Wash'},
+
+  // FOAM WASH & VACCUM for Vehicle Wash
+  { product_id: 'pd352', product_img : '', product_name : 'Cars/Jeeps',
+  product_price : 220, product_details : 'FOAM WASH & VACCUM (Only Vehicle Wash)', product_quantity : 0, product_For: 'Vehicle Wash'},
+
+  // Shoe Polish for SHOE POLISH
+  { product_id: 'pd353', product_img : '', product_name : 'Shoe',
+  product_price : 25, product_details : 'SHOE POLISH (Only Shoe Polish)', product_quantity : 0, product_For: 'Shoe Polish'},
 ]
 
 @Injectable({

@@ -19,7 +19,8 @@ export class CheckoutComponent {
     const alertelement = document.getElementById('alert');
 
     if (this.order.finalPrice > 0) {
-      if (this.order.couponCode != null && this.order.couponCode !== '') {
+      if (this.order.couponCode != null && this.order.couponCode !== ''
+      && this.order.couponCode.toLocaleLowerCase() === 'Wash@10'.toLocaleLowerCase()) {
         this.order.finalPrice = this.order.finalPrice * 0.9;
         this.orderService.AddCheckoutDetails(this.order);
       }
